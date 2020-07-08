@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+	function splitString (names) {
+		let arr = names.split(',');
+		for (let i=0; i<arr.length; i++) {
+			arr[i] = arr[i].trim();
+		}
+		return (arr);
+	}
+
+	let names;
+	let relatives;
+	let namesArray;
+		if (relatives=confirm("Есть ли у тебя братья или сестры?")){
+			 if (names = prompt("Введите их имена.")) {
+			  namesArray = splitString(names);
+			 } else {
+			 	alert('Так незьзя!')
+			 }
+		} else if(relatives=confirm('А двоюродные?')){
+			if (names = prompt("Введите их имена.")) {
+			  namesArray = splitString(names);
+			}else {
+				alert('Так нельзя');
+			}
+		} else {alert('Жаль :(')};
+
+		for (let i = 0; i < namesArray.length; i++) {
+			if (namesArray[i] != false) {
+			console.log('Привет, ' + namesArray[i]);
+			}
+		}
+
+	
+	</script>
+</body>
+</html>
